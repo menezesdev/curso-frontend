@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Curso Front-end - HTML</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale-1">
+		<style>
+			* {
+			   box-sizing: border-box;
+			   }
+
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}   	
+
+			/* Style the header */
+			header {
+				background-color: #666;
+				padding: 30px;
+				text-align: center;
+				font-size: 30px;
+				color: white;
+			}	
+
+			/*create two columns/boxes that floats netx to each other*/
+			nav {
+				float: left;
+				width: 30px;
+				height: 300px;
+				background: #ccc;
+				padding: 100px;
+			}
+
+			/*Style the list inside the menu*/
+			nav ul {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			article{
+				float: left;
+				padding: 20px;
+				width: 70%;
+				background-color: #f1f1f1;
+				height: 300px; /* only for demostration, should be removed */
+			}
+
+			/*clear floats after the columns*/
+			section::after{
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+			/*style the footer*/
+			footer {		
+				background-color: #777;
+				padding: 10px 0;
+				text-align: center;
+				color: white;
+			
+			}
+
+			/*Responsive layout - makes the two columns/boxes stack on top of 
+			each other instead of next to each other, on small screens*/
+			@media (max-width: 600px) {
+				nav, article {
+					width: 100%;
+					height: auto;
+				}
+			}
+			</style>
+	</head>
+	<body >
+
+		<header>
+			<h2>Titulo da página</h2>
+		</header>
+
+		<section>
+
+			<nav>
+				<ul>
+					<li><a href="05-layouts.html">Home</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+					<li><a href="./06-formularios.html">Contato</a></li>
+				</ul>
+			</nav>
+
+			<article>
+				
+				<h1>Título Artigo</h1>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta, eros a aliquet maximus, libero lacus mattis libero, sed sollicitudin ante nunc sit amet tortor. Vestibulum neque urna, pulvinar sed ultricies sit amet, bibendum a massa. Suspendisse nec ornare arcu, ac tincidunt mauris. Integer aliquet in lorem eget pulvinar. Donec sit amet sagittis nibh. Morbi condimentum, urna sed pharetra tincidunt, diam purus sollicitudin neque, in mollis urna ligula sit amet mauris. Nam neque enim, convallis vel felis iaculis, malesuada blandit neque. Nam efficitur urna a magna efficitur gravida. Donec lacinia lorem ac tincidunt ullamcorper. Phasellus dictum leo rutrum, consectetur diam vitae, efficitur ligula. Vivamus porttitor efficitur ipsum, vel fringilla quam fermentum eget. Suspendisse non tortor eget sapien malesuada placerat.</p>
+
+			
+			</article>
+		
+		</section>
+
+		<footer>
+			<p>Desenvolvido por Gabriel Menezes</p>
+		</footer>
+
+	</body>
+</html>	
